@@ -9,19 +9,31 @@
     --clr-off-white: hsl(36, 100%, 99%);
     --clr-grayish-blue:hsl(236, 13%, 42%);
     --clr-very-dark-blue:hsl(240, 100%, 5%);
+    
+    /* font-sizes */
+    --fs-800:3.5rem;
+    --fs-700:1.5rem;
+    --fs-400:0.9375rem;
+
+    /* font-family */
+
+    --ff-inter:'Inter', sans-serif;
 }
 
-/* ## Colors
+@media(min-width:35em){
+    :root{
+        --fs-800: 5rem;
+        --fs-700: 2.5rem;
+        --fs-400: 1rem;
+    }
+}
 
-### Primary
-
-- Soft orange: hsl(35, 77%, 62%)
-- Soft red: hsl(5, 85%, 63%)
-
-### Neutral
-
-Off-white: hsl(36, 100%, 99%)
-Grayish blue: hsl(233, 8%, 79%)
-Dark grayish blue: hsl(236, 13%, 42%)
-Very dark blue: hsl(240, 100%, 5%)
- */
+@media (min-width: 45em) {
+    :root {
+        /* font-sizes */
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-400: 1.125rem;
+    }
+}
