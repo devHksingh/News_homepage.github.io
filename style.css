@@ -17,7 +17,7 @@
 
     /* font-family */
 
-    --ff-inter:'Inter', sans-serif;
+    --ff-sans-inter:'Inter', sans-serif;
 }
 
 @media(min-width:35em){
@@ -33,7 +33,143 @@
         /* font-sizes */
         --fs-800: 6.25rem;
         --fs-700: 3.5rem;
-        --fs-600: 2rem;
+        /* --fs-600: 2rem; */
         --fs-400: 1.125rem;
     }
+}
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+picture{
+    margin: 0;
+}
+
+/* Reset font-weight  */
+h1,
+h2,
+h3,
+h4,
+h5,
+p{
+    font-weight: 400;
+}
+
+/* set up the body */
+body{
+    font-family: var(--ff-sans-inter);
+    font-size: var(--fs-400);
+    color: var(--clr-very-dark-blue);
+    background-color: var(--clr-off-white);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* make images easier to work with */
+img,
+picture{
+    max-width: 100%;
+    display: block;
+}
+
+/* make from elements easier to work with */
+
+button,
+select{
+    font:inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* genral */
+
+.flex{
+    display: flex;
+    gap: var(--gap,1rem);
+}
+
+.grid{
+    display: grid;
+    gap: var(--gap,1rem);
+}
+
+.container{
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+.sr-only {
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; 
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+  }
+
+  /* colors */
+
+  .bg-dark{background-color: var(--clr-very-dark-blue);}
+  .bg-white{background-color: var(--clr-off-white);}
+  .bg-red{background-color: var(--clr-primary-soft-red);}
+
+  .text-dark{background-color: var(--clr-very-dark-blue);}
+  .text-white{background-color: var(--clr-off-white);}
+  .text-organe{background-color: var(--clr-primary-soft-orange);}
+
+  /* typograpghy */
+
+  .ff-sans-inter{font-family: var(--ff-sans-inter);}
+
+  .letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+
+.fs-400 { font-size: var(--fs-400); }
+
+
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
 }
